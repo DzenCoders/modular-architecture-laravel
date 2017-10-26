@@ -1,0 +1,9 @@
+class_name: ApiTester
+modules:
+    enabled: [PhpBrowser, REST, Db]
+    config:
+          PhpBrowser:
+              url: http://laravel.artem/
+          REST:
+              depends: PhpBrowser
+              url: http://laravel.artem/

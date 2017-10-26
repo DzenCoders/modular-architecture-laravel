@@ -1,0 +1,21 @@
+actor: Tester
+paths:
+    tests: tests
+    log: tests/_output/
+    data: tests/_data
+    helpers: tests/_support
+settings:
+    strict_xml: true
+    bootstrap: _bootstrap.php
+    colors: true
+    memory_limit: 2048M
+modules:
+    config:
+        Db:
+            dsn: 'mysql:host=localhost;dbname=laravel'
+            user: 'root'
+            password: ''
+            dump: 'tests/config/dump.sql'
+            populate: true
+            cleanup: false
+            reconnect: false
